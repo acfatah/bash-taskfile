@@ -5,7 +5,7 @@
 Download the template,
 
 ```bash
-curl -so Taskfile https://raw.githubusercontent.com/acfatah/Taskfile/main/Taskfile.template && \
+curl -so Taskfile https://raw.githubusercontent.com/acfatah/bash-taskfile/main/Taskfile.template && \
   chmod +x Taskfile
 ```
 
