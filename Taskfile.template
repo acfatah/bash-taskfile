@@ -2,9 +2,13 @@
 
 # Default task, help
 function task:help {
-  printf "%s <task> [args]\n\nTasks:\n" "${0}"
+  if [[ $# -lt 1 ]]; then
+    printf "%s <task> [args]\n\nTasks:\n" "${0}"
 
-  compgen -A function | sed -En 's/task:(.*)/\1/p' | cat -n
+    compgen -A function | sed -En 's/task:(.*)/\1/p' | cat -n
+  else
+    type task:$1 | tail -n +2
+  fi
 }
 
 TIMEFORMAT="Task completed in %3lR"
